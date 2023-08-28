@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import NavBar from './components/NavBar';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
+import TodoList from './components/TodoList';
+import MainSe from './components/MainSe';
+import { useState } from 'react';
 
 function App() {
+  const [list,setlist] = useState([]);
+
+  const addList = (inputText)=>{
+    if(inputText!=='')
+      setlist([...list,inputText]);
+  }
+  const DeleteList = (key)=>{
+    let newList = [...list];
+    newList.splice(key,1)
+    setlist([...newList]);
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar/>
+      <MainSe addList={addList}/><br/>
+      
+      {list.map((listItem,i)=>{
+        return (
+          <TodoList key={i} item={listItem} index={i} deleteItem={DeleteList}/>
+        )
+      })}
     </div>
   );
 }

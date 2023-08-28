@@ -1,38 +1,67 @@
-.App {
+*{
+  background-color: rgb(43, 39, 39);
+}
+.mainSection{
   text-align: center;
+  background-color: antiquewhite;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-add{
+  border-radius: 8px;
+  background-color: black;
+  color: aqua;
+  border-color: aqua;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-add:hover{
+  border-radius: 15px;
+  background-color: black;
+  color: rgb(200, 255, 0);
+  border-color: rgb(179, 255, 0);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn-add:active{
+  background-color: green;
+}
+.inputTodo{
+  background-color: aliceblue;
+}
+.inputTodo:hover{
+  background-color: beige;
+  border-color: aqua;
+}
+.Todo-li{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  border: 2px solid rgb(25, 0, 255);
+  border-radius: 15px;
+  color: rgb(15, 15, 15);
+  background-color: rgb(184, 206, 206);
+}
+.Todo-li:hover{
+  border-color: rgb(252, 252, 252);
+}
+.liInput{
+  color: aliceblue;
+}
+.icont{
+  background-color: rgb(184, 206, 206);
+}
+.icons{
+  background-color: rgb(184, 206, 206);
+}
+.icons:hover{
+  color:red;
+  pointer-events: painted;
+}
+.h1{
+  font-family: cursive;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
+
+
+
+
+
